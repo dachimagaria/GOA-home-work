@@ -1,0 +1,6 @@
+parentheses --> ფრჩხილები
+qontution mark --> ბრჭყალები
+variable--> ცვლადი (ყუთი)
+value--> ღირებულება
+underscore--> ქვედა ტირე
+data types--> მონაცემთა ტიპები String , integer , float , bulean , variable
