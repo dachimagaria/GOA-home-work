@@ -1,7 +1,10 @@
+username = input("Enter username")
+password = input("Enter password")
+if password =="1234" and username == "დაჩი":
+    print("password is correct")
 
-
-
-
+else :
+    print("password or username is incorrect try again!")
 
 
 
