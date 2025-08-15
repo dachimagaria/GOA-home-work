@@ -13,18 +13,17 @@ if password == "1234" and username == "dachi":
          question = input("What do you want to do? ")
          if question == "log off":
               break
-         valute = input("Witch valute do you want (usd gel eur) ")
-     
-         if valute == "gel":
-              print()
-                 
-             
-              if question =="deposit":
-                    money = int(input("How much money do you want to deposit(TYPE NUMBERS ONLY)?: "))
-              Balance_gel = Balance_gel + money
-                 
-               
-               
+         if question =="deposit":
+               valute = input("Witch valute do you want (usd gel eur) ")
+               money = int(input("How much money do you want to deposit(TYPE NUMBERS ONLY THIS IS GEL)?: "))
+               if valute == "gel":
+                    Balance_gel = Balance_gel + money
+               if valute == "usd":
+                    money = money*0.37
+                    Balance_gel = Balance_gel + money
+               if valute == "eur":
+                    money = money*0.32
+                    Balance_gel = Balance_gel + money
          if question == "pay":
               payment = int(input("How much money do you want to pay?"))
               if payment <= Balance:
