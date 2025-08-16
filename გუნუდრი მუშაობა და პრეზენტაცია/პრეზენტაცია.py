@@ -49,30 +49,30 @@ if password == "1234" and username == "dachi":
                    else:
                         print("payment failed not enough eur") 
          if question == "conversion":
-              what = input("what do you want to convert?")
+              what = input("what do you want to convert? ")
               where = input("where do you want to convert? (usd, gel, eur)")
-              money = int(input("how much money do you want to convert?"))
+              money = int(input("how much money do you want to convert ?"))
 
               if what == "gel":
-                   if Balance_gel < money:
-                    
-               
-                    if where == "gel":
-                        print(Balance_gel)
+                   if Balance_gel >= money:
+                        if where == "gel":
+                              print(Balance_gel)
+                        if where == "usd":
+                              Balance_gel = Balance_gel - money
+                              money = money * 0.37
+                              Balance_usd = Balance_usd + money
+                              print("conversion succsesful ", Balance_usd ,)
+                              print("your gel balance is ", Balance_gel)
+                        if where == "eur":
+                              Balance_gel = Balance_gel - money
+                              money = money * 0.32
+                              Balance_eur = Balance_eur + money
+                              print("conversion succsesful ", Balance_eur ,)
+                              print("your gel balance is ", Balance_gel)
 
-                   if where == "usd":
-                        Balance_gel = Balance_gel - money
-                        money = money * 0.37
+                   else: print("not enough gel!")
 
 
-                        Balance_usd = Balance_usd + money
-
-                        print("conversion succsesful ", Balance_usd ,)
-                        print("your gel balance is ", Balance_gel)
-               
-
-               
-                   
                    
                     
 
@@ -80,7 +80,6 @@ if password == "1234" and username == "dachi":
               
 else :
      print("Password or username is incorrect, Try again!")
-
 
 
 
