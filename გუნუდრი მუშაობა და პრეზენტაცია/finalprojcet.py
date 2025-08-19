@@ -133,75 +133,7 @@ if password == "1234" and username == "dachi":
                         else: print("not enough eur!")
               elif what not in ["gel", "usd", "eur"]:     
                          print("Please input (usd, gel or eur)")
-          elif question not in ["deposit", "pay", "conversion", "log off"]:     
+          elif question not in ["deposit", "pay", "conversion", "log off"]:
                               print("Please input (Deposit, pay, conversion or log off)")
 else :
      print("Password or username is incorrect, Try again!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
