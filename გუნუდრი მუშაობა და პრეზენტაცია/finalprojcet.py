@@ -1,5 +1,4 @@
-
-     #profile
+   
 username = input("enter username: ")
 password = input("Enter password: ")
 Balance_gel = 100
@@ -8,7 +7,7 @@ Balance_usd = 100
 # 1 usd = 2.69 gel
 # 1 usd = 0.86 eur
 # 1 gel = 0.32 eur
-#password და username
+
 if password == "1234" and username == "dachi":
     print("Password and username is correct")
     question = 4
@@ -16,8 +15,8 @@ if password == "1234" and username == "dachi":
           question = input("What do you want to do? ")
           if question == "log off":
               break
-         #log off
-                                               # deposit
+        
+                                               
          
           if question == "deposit":
                     valute = input("in witch valute are u depositing in (usd, gel, eur)? ")
@@ -64,7 +63,7 @@ if password == "1234" and username == "dachi":
               elif where not in ["gel", "usd", "eur"]:
                    print("Please input (usd, gel or eur)")
                         
-                             #conversion
+                            
 
           if question == "conversion":
               what = input("what do you want to convert? ")
