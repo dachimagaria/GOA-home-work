@@ -16,8 +16,7 @@ if password == "1234" and username == "dachi":
           if question == "log off":
               break
         
-                                               
-         w
+                   
           if question == "deposit":
                     valute = input("in witch valute are u depositing in (usd, gel, eur)? ")
                     money = int(input("How much money do you want to deposit in gel(TYPE NUMBERS ONLY)? "))
