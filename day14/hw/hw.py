@@ -73,8 +73,7 @@ else:
     print("I don’t know what day that is")
 
 
-
-
+# :regional_indicator_n: :regional_indicator_i: :regional_indicator_g: :regional_indicator_a: 
 
 
 
