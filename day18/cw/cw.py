@@ -36,7 +36,16 @@ else:
 
 
 
+name = input("enter your name")
 
+if name =="admin":
+    password = input ("enter admin password pls")
+    if password == "adminpassword123":
+        print("hello admin")
+    else:
+        print("Access denied")
+else:
+    print("hello, user")
 
 
 
