@@ -10,7 +10,7 @@ else:
 
 
 # ---------------- 2 ----------------
-age = int(input("\nEnter your age: "))
+age = int(input("Enter your age: "))
 
 if age < 0:
     print("Invalid info")
@@ -31,7 +31,7 @@ correct_password = "1234"   # You can put your own password here
 tries = 0
 
 while True:
-    guess = input("\nGuess the password (or type 'nah strong password' to quit): ")
+    guess = input("Guess the password (or type 'nah strong password' to quit): ")
     tries += 1
 
     if guess == correct_password:
@@ -45,7 +45,7 @@ while True:
 
 
 # ---------------- 4 ----------------
-a = float(input("\nEnter the first number: "))
+a = float(input("Enter the first number: "))
 b = float(input("Enter the second number: "))
 c = float(input("Enter the third number: "))
 
@@ -53,7 +53,7 @@ print("The largest number is:", max(a, b, c))
 
 
 # ---------------- 5 ----------------
-day_num = int(input("\nEnter a number between 1 and 7: "))
+day_num = int(input("Enter a number between 1 and 7: "))
 
 if day_num == 1:
     print("Monday")
