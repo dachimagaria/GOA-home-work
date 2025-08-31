@@ -35,21 +35,18 @@ else:
     print("Invalid number!")
 
 
-name = input("Enter your name: ")
+
+
+name = input("enter your name:")
 
 if name == "admin":
-    password = input("Enter the admin password: ")
+    password = input("Enter the admin password")
     if password == "adminpassword123":
-        print("Hello, Admin")
+        print("hello admin")
     else:
-        print("Access denied")
+        print("Accsess denied")
 else:
-    print("Hello, User")
-
-
-
-
-
+    print("hello user")
 
 
 
