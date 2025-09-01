@@ -1,4 +1,4 @@
-# ---------------- 1 ----------------
+# 1) დავალება
 num = float(input("Enter a number: "))
 
 if num > 0:
@@ -9,7 +9,7 @@ else:
     print("This number is zero")
 
 
-# ---------------- 2 ----------------
+# 2)დავალება
 age = int(input("Enter your age: "))
 
 if age < 0:
@@ -25,9 +25,8 @@ elif 65 <= age <= 120:
 else:
     print("You are a guru or a wizard")
 
-
-# ---------------- 3 ----------------
-correct_password = "1234"   # You can put your own password here
+# 3)დავალება
+correct_password = "1234"   
 tries = 0
 
 while True:
@@ -44,7 +43,7 @@ while True:
         print("Wrong password, try again.")
 
 
-# ---------------- 4 ----------------
+# 4) დავალება
 a = float(input("Enter the first number: "))
 b = float(input("Enter the second number: "))
 c = float(input("Enter the third number: "))
@@ -52,7 +51,7 @@ c = float(input("Enter the third number: "))
 print("The largest number is:", max(a, b, c))
 
 
-# ---------------- 5 ----------------
+# 5) დავალება
 day_num = int(input("Enter a number between 1 and 7: "))
 
 if day_num == 1:
@@ -73,5 +72,5 @@ else:
     print("I don’t know what day that is")
 
 
-# :regional_indicator_n: :regional_indicator_i: :regional_indicator_g: :regional_indicator_a: 
+
 
