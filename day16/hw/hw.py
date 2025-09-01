@@ -44,11 +44,11 @@ while True:
 
 
 # 4) დავალება
-a = float(input("Enter the first number: "))
-b = float(input("Enter the second number: "))
-c = float(input("Enter the third number: "))
+num1 = (input("Enter the first number: "))
+num2 = (input("Enter the second number: "))
+num3 = (input("Enter the third number: "))
 
-print("The largest number is:", max(a, b, c))
+print("The largest number is:", max(num1, num2, num3))
 
 
 # 5) დავალება
