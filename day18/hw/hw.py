@@ -49,9 +49,9 @@ number_1 = int(input("enter first number"))
 number_2 = int(input("enter second number"))
 
 
-if number_1 or number_2 > 0:
+if number_1 > 0 and number_2 > 0:
     print("first and second number is positive")
-elif number_1 or number_2 < 0:
+elif number_1 < 0 and number_2 < 0:
     print("first number and second number is negative")
 else:
     print("what a hell is this")
@@ -60,16 +60,16 @@ else:
 
 
 
-# 4)დაატრიალეთ ფორ ლუპი 50 დან 100 მდე 2 ის გამოტივებით
+# # 4)დაატრიალეთ ფორ ლუპი 50 დან 100 მდე 2 ის გამოტივებით
 for i in range(50, 101, 2):
     print(i)
 
 
 
-# 5)ვაილ ლუპის გამოყენებით 20 დან 40 მდე გამოიტანეთ ყველა რიცხვი
+# # 5)ვაილ ლუპის გამოყენებით 20 დან 40 მდე გამოიტანეთ ყველა რიცხვი
 
 i = 20
-while i <=40:
+while i <40:
     print(i)
     i+= 1
 
@@ -79,7 +79,7 @@ while i <=40:
 
 
 # 6)სოლოლერნი შეასრულეთ Modil 4 quiz ის ჩათვლით
-# გავაკეთე
+
 
 
 

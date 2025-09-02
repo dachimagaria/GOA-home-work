@@ -30,7 +30,7 @@ correct_password = "1234"
 tries = 0
 
 while True:
-    guess = input("Guess the password (or type 'nah strong password' to quit): ")
+    guess = input("uess the password (or type 'nah strong password' to quit): ")
     tries += 1
 
     if guess == correct_password:
@@ -44,9 +44,9 @@ while True:
 
 
 # 4) დავალება
-num1 = (input("Enter the first number: "))
-num2 = (input("Enter the second number: "))
-num3 = (input("Enter the third number: "))
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
 
 print("The largest number is:", max(num1, num2, num3))
 
