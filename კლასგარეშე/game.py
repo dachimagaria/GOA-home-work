@@ -1,7 +1,7 @@
 import random
 WeaponList = ["a", "b", "c"]
 ArmourList = ["a", "b", "c"]
-
+w
 def main():
     PlayerHealth = 20
     FroggitHealth = 20
