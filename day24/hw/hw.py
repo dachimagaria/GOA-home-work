@@ -33,27 +33,37 @@ else:
 words = ["dog", "most", "is", "angry", "running", "forest", "fast", "in", "cat", "human", "very"]
 # უარყოფითი ინდექსები
 
+words = ["cat", "is", "very", "angry"]
 
-# დადებითი ინდექსები - "dog is running in forest very fast"
-
-
-# დადებითი ინდექსები - "cat is very angry"
+print(words[0], words[1], words[2], words[3])
 
 
 
 
-# --- მინუს ინდექსების გამოყენებით შეადგინეთ შემდეგი წინადადება და დაბეჭდეთ --> "dog is running in forest very fast"
+sentence = ["dog", "is", "running", "in", "forest", "very", "fast"]
 
-# --- აასწყვეთ ზემოთ მოცემული წინადადება ოღონდ დადებითი ინდექსებით
+print(sentence[-7], sentence[-6], sentence[-5], sentence[-4], sentence[-3], sentence[-2], sentence[-1])
 
-# --- დადებით ინდექსების გამოყენებით ააწყვეთ შემდეგი წინადადება ---> "cat is very angry"
+
+
+
+print(sentence[0], sentence[1], sentence[2], sentence[3], sentence[4], sentence[5], sentence[6])
+
 
 # 5)
-# შექმენი სია ცხოველებით: ["dog", "cat", "horse", "cow", "sheep", "goat"].
-# მომხმარებელს შემოიტანინე ინდექსი(რიცხვი)
+# ცხოველების სია
+animals = ["dog", "cat", "horse", "cow", "sheep", "goat"]
 
+# შემოტანა მომხმარებლისგან
+index = int(input("შეიყვანე ინდექსი (0-დან 5-მდე): "))
 
-
+# შემოწმება
+if animals[index] == "cat":
+    print("შენ აირჩიე კატა")
+elif animals[index] == "goat":
+    print("შენ აირჩიე თხა")
+else:
+    print("სხვა ცხოველი აირჩიე")
 
 
 
