@@ -126,14 +126,6 @@ print(letters[7] + letters[0] + letters[4] + letters[1] + letters[9] + letters[1
 # 10
 name = 'giorgi'
 
-
-
-
-# შენი დავალებააა რომ for დდა while loop ის დახმარებით გამოიტანო ამ სტრინგის თითეული ასო ცალ ცალკე
-
-
-name = 'giorgi'
-
 for i in range(6):
     print(name[i])
 
