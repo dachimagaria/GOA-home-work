@@ -126,11 +126,15 @@ print(letters[7] + letters[0] + letters[4] + letters[1] + letters[9] + letters[1
 # 10
 name = 'giorgi'
 
+
 for i in range(6):
     print(name[i])
 
 
-
+i = 0
+while i < 6:
+    print(name[i])
+    i += 1
 
 
 
