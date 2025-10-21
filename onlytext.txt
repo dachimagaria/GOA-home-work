@@ -4,9 +4,7 @@ variable--> ცვლადი (ყუთი)
 value--> ღირებულება
 underscore--> ქვედა ტირე
 data types--> მონაცემთა ტიპები String , integer , float , bulean , variable
-
-
-
+ოპერატორი != ნიშნავს „არ არის ტოლი“ ანუ not equal.
 
 
 
