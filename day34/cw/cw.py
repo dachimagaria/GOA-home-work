@@ -1,4 +1,3 @@
-
 momxmarebeli = input("choose any word: ")
 
 print(len(momxmarebeli))
