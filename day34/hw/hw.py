@@ -32,6 +32,7 @@ for i in range(len(sentence)):
         count_a += 1
 print("წინადადებაში არის", count_a, "'a' ასო.")
 
+
 strings = ["sun", "elephant", "programming", "AI", "extraordinary"]
 longest = ""
 for i in range(len(strings)):
