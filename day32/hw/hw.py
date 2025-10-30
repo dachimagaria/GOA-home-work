@@ -66,7 +66,10 @@ for i in range(len(numbers)):
         print(numbers[i])
 
 # 9
+word = input("შეიყვანე სიტყვა: ")
 
+for i in range(len(word)):
+    print(word[i])
 
 # 10
 total = 0
