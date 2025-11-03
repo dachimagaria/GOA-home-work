@@ -56,3 +56,5 @@ for i in range(len(text)):
     if text[i] == 'a' or text[i] == 'A':
         continue
     print(text[i])
+
+    
