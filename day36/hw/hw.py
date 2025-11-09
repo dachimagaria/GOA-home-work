@@ -31,13 +31,13 @@
 
 
 # 3) 
-# text = input("შეიყვანე წინადადება: ")
-# for i in range(len(text)):
-#     if text[i] == "":
-#         continue
-#     print(text[i])
+text = input("შეიყვანე წინადადება: ")
+for i in range(len(text)):
+    if text[i] == "":
+        continue
+    print(text[i])
 
-# 
+
 
 # # 4) 
 # text2 = input("შეიყვანე წინადადება: ")
