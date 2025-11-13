@@ -99,14 +99,11 @@
 
 # print(type(word))
 # print(type(num))
-# print(type(num_1))
-# print(type(bollian))
+# print(type(num_1))   print(type(bollian))
 
 
 
-
-
-
+  
 #10)მომხმარებელს შემოატანინე ორი რიცხვი,შენი დავალეაბაა ამ ორ რიცხვზე მოახდინოთ შედარების ოპერაციები(გამოიყენე ყველა შედარების ოპერატორი რაც ვისწავლეთ),
 
 # num_1=int(input("first number"))
@@ -114,7 +111,7 @@
 
 # print(num_1 > num_2)
 # print(num_1 < num_2)
-# print(num_1==num_2)
+# print(num_1==num_2)  
 # print(num_1>=num_2)
 # print(num_1<=num_2)
 # print(num_1!=num_2)
