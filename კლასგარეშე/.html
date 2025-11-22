@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Undertale Sans Battle Demo</title>
+<style>
+body{margin:0; background:black; overflow:hidden; font-family:monospace;}
+#stage{width:540px; height:300px; border:3px solid white; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); overflow:hidden; background:#060606;}
+#soul{width:16px; height:16px; position:absolute; background:red; border-radius:2px;}
+#enemy{width:80px; height:80px; position:absolute; left:50%; top:12px; transform:translateX(-50%); background:white;}
+.bone{position:absolute; width:18px; height:8px; background:#fff; border-radius:4px; box-shadow:0 0 8px rgba(255,255,255,0.6);}
+.bone-vert{width:8px;height:18px;border-radius:4px;}
+.beam{position:absolute; left:100%; top:0; height:100%; width:0; background: linear-gradient(90deg,#fff, rgba(255,255,255,0.1)); box-shadow:0 0 18px rgba(255,255,255,0.9);}
+#ui{position:absolute; left:8px; bottom:8px; font-size:14px; color:white;}
+#msg{position:absolute; left:50%; bottom:-30px; transform:translateX(-50%); color:white; font-size:18px;}
+</style>
+</head>
+<body>
+<div id="stage" tabindex="0">
+  <div id="enemy"></div>
+  <div id="soul"></div>
+  <div id="ui">HP: <span id="hp">20</span></div>
+  <div id="msg">* Sans is attacking...</div>
+</div>
+
+<script>
+// -------- PLAYER SETUP --------
+const CONFIG={stageW:540,stageH:300,soulSpeed:5,soulSize:16,hp:20};
+const stage=document.getElementById('stage');
+const soul=document.getElementById('soul');
+const enemy=document.getElementById('enemy');
+const msg=document.getElementById('msg');
+const hpEl=document.getElementById('hp');
+let HP=CONFIG.hp; hpEl.textContent=HP;
+let soulX=CONFIG.stageW/2-CONFIG.soulSize/2;
+let soulY=CONFIG.stageH*0.6-CONFIG.soulSize/2;
+soul.style.left=soulX+'px';
+soul.style.top=soulY+'px';
+stage.focus();
+
+const keys={};
+document.addEventListener('keydown', e=>keys[e.key]=true);
+document.addEventListener('keyup', e=>keys[e.key]=false);
+
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function updatePlayer(){
+  if(keys['ArrowLeft']||keys['a']) soulX-=CONFIG.soulSpeed;
+  if(keys['ArrowRight']||keys['d']) soulX+=CONFIG.soulSpeed;
+  if(keys['ArrowUp']||keys['w']) soulY-=CONFIG.soulSpeed;
+  if(keys['ArrowDown']||keys['s']) soulY+=CONFIG.soulSpeed;
+  soulX=clamp(soulX,4,CONFIG.stageW-CONFIG.soulSize-4);
+  soulY=clamp(soulY,4,CONFIG.stageH-CONFIG.soulSize-4);
+  soul.style.left=soulX+'px';
+  soul.style.top=soulY+'px';
+  requestAnimationFrame(updatePlayer);
+}
+updatePlayer();
+
+// -------- ATTACKS & COLLISION --------
+function rectsIntersect(a,b){return !(a.right<b.left||a.left>b.right||a.bottom<b.top||a.top>b.bottom);}
+function hitPlayer(amount){
+  HP-=amount; hpEl.textContent=HP;
+  msg.textContent='* You got hit! -'+amount;
+  soul.style.transition='opacity 0.12s'; soul.style.opacity='0.2';
+  setTimeout(()=>soul.style.opacity='1',120);
+  if(HP<=0) msg.textContent='* You Died...';
+}
+
+function spawnBone(x,y,vx,vy,vertical=false){
+  const b=document.createElement('div'); b.className='bone'+(vertical?' bone-vert':''); stage.appendChild(b);
+  let posX=x,posY=y,alive=true;
+  function step(){
+    posX+=vx; posY+=vy;
+    b.style.left=posX+'px'; b.style.top=posY+'px';
+    if(alive && rectsIntersect(soul.getBoundingClientRect(),b.getBoundingClientRect())){
+      alive=false; hitPlayer(1); b.remove(); return;
+    }
+    if(posX<-40||posX>CONFIG.stageW+40||posY<-40||posY>CONFIG.stageH+40){ b.remove(); return;}
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function spawnBeam(side='right',windup=700,beamTime=1400){
+  const beam=document.createElement('div'); beam.className='beam'; stage.appendChild(beam);
+  const initialLeft=side==='right'?CONFIG.stageW:-20;
+  beam.style.left=initialLeft+'px'; beam.style.top='0px';
+  enemy.style.transition='filter 0.15s'; enemy.style.filter='brightness(1.4) drop-shadow(0 0 10px white)';
+  setTimeout(()=>{
+    enemy.style.filter='';
+    const start=performance.now();
+    function expand(now){
+      const t=now-start; const progress=Math.min(1,t/150);
+      if(side==='right') beam.style.left=(CONFIG.stageW-(progress*(CONFIG.stageW+40)))+'px';
+      beam.style.width=(progress*(CONFIG.stageW+40))+'px';
+      if(rectsIntersect(soul.getBoundingClientRect(),beam.getBoundingClientRect())) hitPlayer(3);
+      if(progress<1) requestAnimationFrame(expand);
+    }
+    requestAnimationFrame(expand);
+    setTimeout(()=>beam.remove(),beamTime);
+  },windup);
+}
+
+// -------- ATTACK LOOP --------
+setInterval(()=>{ // random bones
+  const y=Math.random()*(CONFIG.stageH-60);
+  spawnBone(CONFIG.stageW+8,y,-6,0,false);
+  if(Math.random()<0.4){ // vertical bone occasionally
+    const x=30+Math.random()*(CONFIG.stageW-60);
+    spawnBone(x,-30,0,4,true);
+  }
+},500);
+
+setInterval(()=>spawnBeam('right',500,1000),5000); // beam every 5s
+
+</script>
+</body>
+</html>
