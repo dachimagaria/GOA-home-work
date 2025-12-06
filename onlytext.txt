@@ -31,20 +31,148 @@ print(7 // 2)  # გამოტანს 3, რადგან მთლია�
 
 
 
+-------------------------------
+1) Global Reset + Default Fonts
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
 
 
+✔ ყველა ელემენტს უქრობს default-margin/padding-ს
+✔ box-sizing: border-box აკეთებს იმას რომ padding + border აღარ აჭარბებს ზომას
+✔ ყველას აყენებს ერთსა და იმავე modern font-ს
+
+2) Body სტილი
+body {
+    background-color: #eef1f5;
+    color: #2a3b4e;
+}
 
 
+✔ ფონს რთავს ძალიან ღია ნაცრისფერს
+✔ ტექსტის ფერს აყენებს მუქ ლურჯ-მონაცრისფერს
+✔ ქმნის airline clean დიზაინს
+
+3) HEADER (ზედა ზოლი)
+.header {
+    width: 100%;
+    height: 110px;
+    background: linear-gradient(90deg, #00264d, #003d7a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
 
 
+✔ width: 100% — ჰედერი იკავებს მთელ სიგანეს
+✔ height: 110px — ფიქსირებული სიმაღლე
+✔ gradient background — airline premium look
+✔ display: flex + justify-content: center — ცენტრში აყენებს ტიტულს
+✔ align-items: center — ვერტიკალურად აწევს ცენტრში
+✔ ჩრდილი ადის ქვემოთ → ლამაზ ეფექტს ქმნის
+
+HEADER სათაური
+.header h1 {
+    color: white;
+    font-size: 34px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
 
 
+✔ თეთრი ტექსტი
+✔ დიდი ზომა (34px)
+✔ "letter-spacing" — ასოებს შორის ოდნავ სივრცეს ამატებს
+✔ font-weight: 700 — bold ტექსტი
+
+4) VIDEO SECTION
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 20px;
+}
 
 
+✔ display: flex → ჰორიზონტალური განლაგება
+✔ justify-content: center → ვიდეო ცენტრში უდევს
+✔ Margin-top video-ს მაღლა არიდებს
+✔ Padding გვერდებზე სივრცეს აყრის
+
+Video Wrapper (ლურჯი ბლოკი ვიდეოს ირგვლივ)
+.video-wrapper {
+    width: 100%;
+    max-width: 700px;
+    background: #002a4d;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
 
 
+✔ მაქსიმუმ 700px ზომის ბლოკი → Responsive
+✔ მუქი ლურჯი ფონი → airline vibe
+✔ padding: 18px — ვიდეოს გარშემო სივრცე
+✔ border-radius: 15px — მომრგვალებული კუთხეები
+✔ ღრმა ჩრდილი → premium card look
+
+Video Style
+video {
+    width: 100%;
+    border-radius: 12px;
+}
 
 
+✔ ვიდეო იკავებს wrapper-ის 100%-ს
+✔ მომრგვალებული კუთხეები → ლამაზი ვიზუალი
+
+Caption (ქვევით ტექსტი)
+.caption {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+
+✔ ცენტრში აყენებს ტექსტს
+✔ თეთრი, მაგრამ 80% გამჭვირვალე
+✔ პატარა და დახვეწილი სტილი
+
+5) FOOTER
+footer {
+    margin-top: 70px;
+    background: #00264d;
+    color: #ccd6e2;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+
+✔ ზემოთ ტოვებს სივრცეს
+✔ მუქი ლურჯი airline-style ფონი
+✔ ღია ნაცრისფერი ტექსტი
+✔ 20px padding → სუფთა სივრცე
+✔ footer-ის ტექსტი ცენტრში
+
+📌 შემაჯამებელი—ბროუ, მოკლედ:
+ნაწილი	რას აკეთებს
+global reset	ასუფთავებს default სტილებს
+body	ადგენს ფონის ფერს და ტექსტის ფერს
+header	ქმნის ლამაზ ზედა ზოლს
+nav	ვიდეოს ცენტრში აყენებს
+video-wrapper	ვიდეოს ლამაზ ჩარჩოში დებს
+video	თვითონ ვიდეოს ზომა/კუთხეები
+caption	ქვემო ტექსტი ვიდეოს ქვეშ
+footer	ქვედა საინფორმაციო ზოლი
+
+---------------------------------
 
 
 
