@@ -175,7 +175,178 @@ footer	ქვედა საინფორმაციო ზოლი
 ---------------------------------
 
 
+1. საერთო სტილები
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
 
+
+*: სტილი გამოიყენება ყველა ელემენტზე ვებგვერდზე (универсალური მორგება). ეს ცვლის მარჟინებს და padding-ს, რათა ყველა ელემენტს ჰქონდეს სტანდარტული მარჟინები და პადინგი.
+
+box-sizing: border-box;: როდესაც ზომები განისაზღვრება, საზღვარი და padding არ მიემატება ელემენტის ზომას, რაც ვებგვერდის layout-ს ხდის უფრო მყარს.
+
+font-family: 'Segoe UI', Arial, sans-serif;: ასპექტი განსაზღვრავს ფონტს. თუ 'Segoe UI' არ არის ხელმისაწვდომი, გამოიყენება Arial ან sans-serif.
+
+2. Body სტილი
+body {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+
+background-color: #f8f9fa;: ფონდის ფერი გამოიყურება ღია ნაცრისფრად.
+
+color: #2c3e50;: ტექსტის ფერი გამოიყენებს მუქ ლურჯს.
+
+line-height: 1.6;: მართავს ხაზებს შორის მანძილს, რაც ტექსტს უფრო მოსახერხებელს ხდის.
+
+3. Header სტილი
+header {
+  background: linear-gradient(135deg, #002244 0%, #003366 100%);
+  padding: 20px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+background: linear-gradient(135deg, #002244 0%, #003366 100%);: ქმნის გრადიენტს, რომელიც იწვევს ფერების გადავლას მუქი ლურჯიდან მუქ ლურჯად.
+
+padding: 20px 0;: შიდა მარჟინები ზემოთ და ქვემოთ.
+
+box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);: განსაზღვრავს სიბნელის ეფექტს, რომელიც ჰგავს ჩრდილს.
+
+position: sticky;: ამ ხაზით მნიშნველოვანია, რომ ჰედერი დარჩება დოკუმენტის ზედაპირზე რომ არ გადავიდეს როდესაც გვერდი სკროლდება.
+
+top: 0;: ჰედერი მუდმივად დარჩება ზედა მხარეს.
+
+z-index: 100;: ზ-index განსაზღვრავს რენდერის ზედა მნიშვნელობას. მაღალი მნიშვნელობა ნიშნავს რომ ელემენტი იქნება "ზემოდან".
+
+4. Nav (ნავიგაციის მენიუ)
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+max-width: 1200px;: განსაზღვრავს მაქსიმალურ სიგანეს ნავიგაციის ელემენტებისთვის.
+
+margin: 0 auto;: მენიუს ცენტრი ადგილას დგება.
+
+padding: 0 20px;: padding-ი მარცხნივ და მარჯვნივ.
+
+display: flex;: ელემენტები განლაგდება "flexbox"-ის გამოყენებით.
+
+justify-content: space-between;: ელემენტები განაწილდება მარცხნივ და მარჯვნივ შორის.
+
+align-items: center;: ალაინდება მენიუ ვერტიკალურად ცენტრში.
+
+5. .logo (ლოგო)
+.ლოგო h1 {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+color: white;: ლოგო იქნება თეთრი ფერის.
+
+font-size: 26px;: ტექსტის ზომა.
+
+font-weight: 600;: მტკიცე, დაძაბული შრიფტი.
+
+letter-spacing: 1px;: სიმბოლოებს შორის მანძილის გაზრდა.
+
+6. .nav-links (ნავიგაციის ბმულები)
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 8px 0;
+  position: relative;
+}
+
+
+color: #e0e0e0;: ბმულები იწყება ღია ნაცრისფერად.
+
+text-decoration: none;: გამორიცხავს ხაზს, რომელიც ჩვეულებრივ ბმულებზე გამოჩნდება.
+
+font-size: 16px;: ზომა.
+
+font-weight: 500;: ზომიერად მტკიცე შრიფტი.
+
+transition: color 0.3s;: ბმულის ფერის ცვლილება გახდება სრიალა (transition).
+
+padding: 8px 0;: padding ზევით და ქვემოთ.
+
+position: relative;: ეს საშუალებას აძლევს ელემენტებს იქონიონ პოზიციონირება.
+
+7. .nav-links a:hover (ბმულის ჰოვერი)
+.nav-links a:hover {
+  color: #ff9900;
+}
+
+
+color: #ff9900;: როდესაც მომხმარებელი ზედაპირზე მიდის, ბმული იცვლის ფერს ოქროსფრად.
+
+8. .nav-links a::after (დამატებითი ხაზის სტილი)
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff9900;
+  transition: width 0.3s;
+}
+
+
+content: '';: იყენებს "empty" კონტენტს, მაგრამ მოაქვს ვიზუალური ეფექტი.
+
+position: absolute;: absolute პოზიციონირება.
+
+bottom: 0;: ხაზის განლაგება ქვედა მხრიდან.
+
+width: 0;: ხაზის სიგრძე იწყება 0.
+
+height: 2px;: სიგანე.
+
+background: #ff9900;: ოქროსფერი ხაზის ფერი.
+
+transition: width 0.3s;: ამ ხაზის სიგრძე იცვლება სრიალით.
+
+9. .main (მთავარი)
+.მთავარი {
+  background: linear-gradient(rgba(0, 34, 68, 0.85), rgba(0, 51, 102, 0.85)), url(avia.avif) center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  margin-bottom: 60px;
+}
+
+
+background: linear-gradient(...), url(...);: ფონზე კომბინაცია გრადიენტსა და სურათს შორის.
+
+color: white;: ტექსტი თეთრი.
+
+text-align: center;: ტექსტი განლაგებულია ცენტრალურ ნაწილში.
+
+padding: 120px 20px;: padding ზემოდან და ქვემოთ.
+
+margin-bottom: 60px;: ქვედა მარჟინი.
 
 
 
