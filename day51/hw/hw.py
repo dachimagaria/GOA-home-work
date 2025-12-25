@@ -51,16 +51,18 @@ print(my_list)
 
 # 5) შექმენით რიცხვებით სავსე სია, გამოითვალეთ რიცხვების საშუალო არითმეტიკული - რიცხვების ჯამი გაყოფილი რიცხვების რაოდენობაზე
 
-
-# numbers = [10, 20, 30, 40, 50]
-
-
-# total = sum(numbers)
+numbers = [10, 20, 30, 40, 50]
 
 
-# count = len(numbers)
+total = 0
+for number in numbers:
+    total += number
 
 
-# average = total / count
+count = len(numbers)
 
-# print("საშუალო არითმეტიკული:", average)
+
+average = total / count
+
+print("ჯამი:", total)
+print("საშუალო არითმეტიკული:", average)
