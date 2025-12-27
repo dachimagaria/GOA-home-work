@@ -1,191 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Top Down Racing Game</title>
-
-<style>
-body {
-    margin: 0;
-    background: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-canvas {
-    border: 3px solid white;
-    background: #2a2a2a;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Porsche | Official Fan Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-
 <body>
 
-<canvas id="game" width="600" height="700"></canvas>
+<header class="navbar">
+    <h1 class="logo">PORSCHE</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#models">Models</a>
+        <a href="#performance">Performance</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<script>
-/* =====================
-   CANVAS
-===================== */
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
+<section class="hero">
+    <div class="hero-text">
+        <h2>Driven by Performance</h2>
+        <p>Luxury. Speed. Precision.</p>
+        <button>Explore More</button>
+    </div>
+</section>
 
-/* =====================
-   INPUT
-===================== */
-const keys = {};
-addEventListener("keydown", e => keys[e.key] = true);
-addEventListener("keyup", e => keys[e.key] = false);
+<section id="about" class="section">
+    <h2>About Porsche</h2>
+    <p>
+        Porsche is a legendary German automobile manufacturer known for
+        high-performance sports cars, precision engineering, and iconic design.
+        Every Porsche is built to deliver pure driving pleasure.
+    </p>
+</section>
 
-/* =====================
-   PLAYER CAR
-===================== */
-const car = {
-    x: 300,
-    y: 500,
-    angle: -Math.PI / 2,
-    speed: 0,
-    maxSpeed: 6,
-    accel: 0.25,
-    friction: 0.96,
-    driftFriction: 0.88,
-    width: 30,
-    height: 50
-};
+<section id="models" class="section dark">
+    <h2>Porsche Models</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>911</h3>
+            <p>Iconic design with extreme performance.</p>
+        </div>
+        <div class="card">
+            <h3>Taycan</h3>
+            <p>Electric power meets Porsche soul.</p>
+        </div>
+        <div class="card">
+            <h3>Cayenne</h3>
+            <p>Luxury SUV with sports DNA.</p>
+        </div>
+        <div class="card">
+            <h3>Panamera</h3>
+            <p>Sport meets comfort.</p>
+        </div>
+    </div>
+</section>
 
-/* =====================
-   NPCs (PEOPLE)
-===================== */
-let npcs = [];
-let score = 0;
-let frame = 0;
+<section id="performance" class="section">
+    <h2>Performance</h2>
+    <ul class="stats">
+        <li>⚡ 0–100 km/h in 2.7s</li>
+        <li>🏁 Top Speed 330+ km/h</li>
+        <li>🔥 Turbocharged Engines</li>
+        <li>⚙️ Precision Handling</li>
+    </ul>
+</section>
 
-/* =====================
-   SPAWN NPC
-===================== */
-function spawnNPC() {
-    npcs.push({
-        x: Math.random() * 520 + 40,
-        y: -30,
-        r: 10,
-        alive: true
-    });
-}
+<section id="gallery" class="section dark">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+        <div class="img-box"></div>
+    </div>
+</section>
 
-/* =====================
-   COLLISION
-===================== */
-function hitCircleRect(cx, cy, r, rx, ry, rw, rh) {
-    const testX = Math.max(rx, Math.min(cx, rx + rw));
-    const testY = Math.max(ry, Math.min(cy, ry + rh));
-    const dx = cx - testX;
-    const dy = cy - testY;
-    return dx * dx + dy * dy < r * r;
-}
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
 
-/* =====================
-   UPDATE CAR
-===================== */
-function updateCar() {
-    if (keys["w"] || keys["ArrowUp"]) {
-        car.speed += car.accel;
-    }
-
-    car.speed = Math.min(car.speed, car.maxSpeed);
-
-    if (keys["a"] || keys["ArrowLeft"]) car.angle -= 0.05;
-    if (keys["d"] || keys["ArrowRight"]) car.angle += 0.05;
-
-    const grip = keys["Shift"] ? car.driftFriction : car.friction;
-
-    car.x += Math.cos(car.angle) * car.speed;
-    car.y += Math.sin(car.angle) * car.speed;
-
-    car.speed *= grip;
-
-    car.x = Math.max(20, Math.min(580, car.x));
-    car.y = Math.max(20, Math.min(680, car.y));
-}
-
-/* =====================
-   UPDATE NPCs
-===================== */
-function updateNPCs() {
-    npcs.forEach(n => {
-        n.y += 2;
-
-        if (n.alive) {
-            const rx = car.x - car.width / 2;
-            const ry = car.y - car.height / 2;
-
-            if (hitCircleRect(n.x, n.y, n.r, rx, ry, car.width, car.height)) {
-                n.alive = false;
-                score += 100;
-            }
-        }
-    });
-
-    npcs = npcs.filter(n => n.y < 800);
-}
-
-/* =====================
-   DRAW
-===================== */
-function drawCar() {
-    ctx.save();
-    ctx.translate(car.x, car.y);
-    ctx.rotate(car.angle);
-    ctx.fillStyle = "red";
-    ctx.fillRect(
-        -car.width / 2,
-        -car.height / 2,
-        car.width,
-        car.height
-    );
-    ctx.restore();
-}
-
-function drawNPCs() {
-    npcs.forEach(n => {
-        if (n.alive) {
-            ctx.fillStyle = "yellow";
-            ctx.beginPath();
-            ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    });
-}
-
-function drawUI() {
-    ctx.fillStyle = "white";
-    ctx.fillText("Score: " + score, 10, 20);
-    ctx.fillText("Speed: " + car.speed.toFixed(1), 10, 40);
-    ctx.fillText("Drift: HOLD SHIFT", 10, 60);
-}
-
-/* =====================
-   GAME LOOP
-===================== */
-function loop() {
-    frame++;
-    if (frame % 70 === 0) spawnNPC();
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    updateCar();
-    updateNPCs();
-
-    drawNPCs();
-    drawCar();
-    drawUI();
-
-    requestAnimationFrame(loop);
-}
-
-loop();
-</script>
+<footer>
+    <p>© 2025 Porsche Fan Website | Not Official</p>
+</footer>
 
 </body>
 </html>
