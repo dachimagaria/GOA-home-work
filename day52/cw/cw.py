@@ -13,10 +13,6 @@ print(words)
         
 
 
-"hellow monkey"
-        
-
-
-
+"hello monkey"
 
 
