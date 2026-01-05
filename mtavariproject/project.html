@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-
 <head>
-    
-    <title style="color: green">Goal oriented Academy</title>
-    
+  <meta charset="UTF-8" />
+  <title>Airplanes World</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <header>
+    <h1>✈ Airplanes World</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#types">Types</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#facts">Facts</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h2>Explore the Sky</h2>
+    <p>The power, speed, and beauty of airplanes</p>
+    <button onclick="scrollToSection()">Learn More</button>
+  </section>
 
-    
- <h1 style="position: relative; left: 35%; color: green;">მოგესალმებით  GOA_ში</h1>
-  <nav>
-   <a href="" style="font-size: 25px;">Home</a>
-   <a href="" style="font-size: 25px;">About</a>
-   <a href="" style="font-size: 25px;">Media</a>
-  </nav>
+  <section id="about" class="section">
+    <h2>About Airplanes</h2>
+    <p>Airplanes are one of humanity’s greatest inventions. They allow fast travel, cargo transport, and sky exploration.</p>
+  </section>
 
-  <p style="color: green; font-size: 17px;">
-        მოგესალმებით GOA - Goal Oriented Academy-ის ოფიციალურ ვებ-გვერდზე! <br><br>
-        თქვენ აქ გამოიმუშავებთ უნიკალურ შესაძლებლობას, მიიღოთ ცოდნა და უნარები, რომლებიც დაგეხმარებათ თქვენი მიზნების მიღწევაში.<br><br>
-        GOA არის ადგილი, სადაც შეგიძლიათ განავითაროთ თქვენი პროფესიული და პიროვნული უნარები, მიიღოთ სერტიფიკატები და გაიგოთ ახალი ტექნოლოგიები.<br><br>
-        GOA ში არამარტო პროგრამირებას არამედ MMA სწავლობთ, რაც დაგეხმარებათ ფიზიკურადაც და მენტალურადაც ძლიერი იყოთ.<br><br>
-        ჩვენი კურსები შექმნილია იმისთვის, რომ დაგეხმაროთ თქვენი კარიერის განვითარებაში და პირადი მიზნების მიღწევაში.<br><br>
-        ჩვენ გვჯერა, რომ სწავლის პროცესი უნდა იყოს ინტერაქტიული და საინტერესო, ამიტომ ჩვენი კურსები მოიცავს პრაქტიკულ პროექტებს, ჯგუფურ მუშაობას და რეალურ სამყაროს მაგალითებს.<br><br>
-    </p>
+  <section id="types" class="section dark">
+    <h2>Types of Airplanes</h2>
+    <div class="cards">
+      <div class="card"><h3>Commercial</h3><p>Passenger jets like Boeing and Airbus.</p></div>
+      <div class="card"><h3>Military</h3><p>Fighter jets and defense aircraft.</p></div>
+      <div class="card"><h3>Cargo</h3><p>Heavy transport airplanes.</p></div>
+      <div class="card"><h3>Private</h3><p>Personal and business jets.</p></div>
+    </div>
+  </section>
 
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="img-box">✈</div>
+      <div class="img-box">🛫</div>
+      <div class="img-box">🛬</div>
+      <div class="img-box">🚀</div>
+    </div>
+  </section>
 
+  <section id="facts" class="section dark">
+    <h2>Random Airplane Fact</h2>
+    <p id="fact">Click the button to learn something cool!</p>
+    <button onclick="newFact()">New Fact</button>
+  </section>
 
+  <footer>
+    <p>© 2026 Airplanes World</p>
+  </footer>
 
-<img src="Screenshot 2025-09-25 215155.png" alt="goas surati" style="border-radius: 50%; position: relative; left: 1230px; bottom: 460px; 
-width: 200px;  height: 150px;">
-
-
-<img src="Screenshot 2025-09-25 215155.png" alt="goas surati" style="border-radius: 50%; position: relative; left: 1150px; bottom: 720px; width: 150px;  height: 120px; bottom: 600px;">
-
-
-<img src="Screenshot 2025-09-25 215155.png" alt="goas surati" style="border-radius: 50%; position: relative; left: 1150px; width: 600px;  height: 400px;  bottom: 370px;">
-    <br><br><br><br><br><br><br><br><br><br>
-
-  <img src="487313552_653189104131055_9111043674858649549_n.jpg" alt="goas surati" style="position: relative; left: 400px; width: 1300px;  height: 600px; bottom: 300px;">
-  
-    
-
-    
-   <p style="color: green; font-size: 25px; position: relative; left: 640px; bottom: 300px;">იხილეთ ჩვენი facebook  და youtube გვერდები:
-      <a href="https://www.facebook.com/nika11keshelava" target="_blank " style="font-size: 25px;">Facebook</a>
-      <a href="https://www.youtube.com/@Goal_Oriented_Academy__GOA" target="_blank" style="font-size: 25px;">YouTube</a>
-   </p>
-    
-
-
-
-
-
-
-   
+  <script src="script.js"></script>
 </body>
 </html>
