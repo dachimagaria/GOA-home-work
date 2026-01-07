@@ -2,14 +2,14 @@
 # 1) შექმენით რიცხვებით სავსე სია და ახალ სიაში ჩააგდეთ ყველა რიცხვი გამრავლებული 2-ზე. დაპრინტეთ ახალი სია.
 
 
-numbers = [1, 2, 3, 4, 5, 6]
+# numbers = [1, 2, 3, 4, 5, 6]
 
-new_numbers = []
+# new_numbers = []
 
-for num in numbers:
-    new_numbers.append(num * 2)
+# for num in numbers:
+#     new_numbers.append(num * 2)
 
-print(new_numbers)
+# print(new_numbers)
 
     
 
@@ -17,15 +17,15 @@ print(new_numbers)
 # 2) შექმენით სახელებით სავსე სია, მომხმარებელს შემოატანინეთ რაიმე რიცხვი, და ამ რიცხვის ინდექსზე ჩაამატეთ სახელი "ნიკა" თქვენს სიაში.
 
 
-names = ["გეგა", "დაჩი", "ლუკა", "რეზი"]
+# names = ["გეგა", "დაჩი", "ლუკა", "რეზი"]
 
 
-index = int(input("შეიყვანე რიცხვი (ინდექსი): "))
+# index = int(input("შეიყვანე რიცხვი (ინდექსი): "))
 
 
-names.insert(index, "ნიკა")
+# names.insert(index, "ნიკა")
                                                           
-print(names)
+# print(names)
 
 
 # 3) შექმენით string წინადადების ცვლადი, ამ წინადადებიდან დაპრინტეთ მხოლოდ ხმოვანი ასოები.
