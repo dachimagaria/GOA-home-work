@@ -1,0 +1,35 @@
+body {
+    background-color: #e6f2ff;
+    font-family: Arial;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
+    color: green;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: orange;
+    border: 2px solid black;
+}
