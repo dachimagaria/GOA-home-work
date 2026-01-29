@@ -1,351 +1,228 @@
-<html>
-<head>
-  <title>GOA Airlines - ტოკიო</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
 
-    body {
-      background-color: #f8f9fa;
-      color: #2c3e50;
-      line-height: 1.6;
-    }
+    <title>ქართული მეღვინეობა</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      background-color: #003366;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
 
-    nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        header {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-    .logo h1 {
-      color: white;
-      font-size: 24px;
-      font-weight: 600;
-    }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
 
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-    }
+        header p {
+            font-size: 22px;
+        }
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
+        nav {
+            background-color: #5a0f2e;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
 
-    .nav-links a:hover {
-      color: #ff9900;
-    }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-    .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1600&q=80') center/cover;
-      color: white;
-      padding: 80px 20px;
-      margin-bottom: 40px;
-      text-align: center;
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+        .container {
+            padding: 50px 80px;
+        }
 
-    .hero p {
-      font-size: 18px;
-      opacity: 0.9;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .section {
+            margin-bottom: 60px;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #5a0f2e;
+            margin-bottom: 20px;
+        }
 
-    .booking-grid {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
 
-    .destination-details {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    }
+        .about img {
+            width: 45%;
+            border-radius: 12px;
+        }
 
-    .destination-details h3 {
-      font-size: 24px;
-      color: #003366;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
-    .details-list {
-      list-style: none;
-      margin-bottom: 25px;
-    }
+        .wines {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
 
-    .details-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      justify-content: space-between;
-    }
+        .wine-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
 
-    .detail-label {
-      color: #666;
-      font-weight: 500;
-    }
+        .wine-card:hover {
+            transform: translateY(-10px);
+        }
 
-    .detail-value {
-      color: #003366;
-      font-weight: 500;
-    }
+        .wine-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
 
-    .booking-form {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    }
+        .wine-card div {
+            padding: 20px;
+        }
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+        .wine-card h3 {
+            margin-bottom: 10px;
+        }
 
-    .form-group label {
-      display: block;
-      font-size: 15px;
-      color: #003366;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
+        .wine-card button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #5a0f2e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
 
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 15px;
-      background: #fafafa;
-    }
+        .wine-card button:hover {
+            background-color: #7b1e3a;
+        }
 
-    .form-group input:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: #ff9900;
-      background: white;
-    }
+        .contact-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 60%;
+        }
 
-    .btn-submit {
-      width: 100%;
-      background: #ff9900;
-      color: white;
-      border: none;
-      padding: 15px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .btn-submit:hover {
-      background: #e68a00;
-      transform: translateY(-2px);
-    }
-
-    .video-section {
-      background: #003366;
-      padding: 40px 20px;
-      margin: 40px 0;
-    }
-
-    .video-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .video-wrapper {
-      background: #001a33;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .video-caption {
-      padding: 15px;
-      color: white;
-      font-size: 14px;
-      text-align: center;
-      opacity: 0.8;
-    }
-
-    footer {
-      background: #003366;
-      color: #b0b0b0;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .booking-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .hero {
-        padding: 60px 20px;
-      }
-      
-      .hero h1 {
-        font-size: 28px;
-      }
-    }
-  </style>
+        footer {
+            background-color: #5a0f2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div class="logo">
-        <h1>GOA Airlines</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="main.html">მთავარი</a></li>
-        <li><a href="#booking">დაჯავშნა</a></li>
-        <li><a href="#contact">კონტაქტი</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+    <h1>ქართული მეღვინეობა</h1>
+    <p>ღვინო, რომელიც ტრადიციას ყვება</p>
+</header>
 
-  <section class="hero">
-    <h1>რეისის დაჯავშნა ტოკიოში</h1>
-    <p>აღმოაჩინე იაპონიის დედაქალაქი - თანამედროვე ტექნოლოგია და ტრადიციული კულტურის სინთეზი</p>
-  </section>
+<nav>
+    <a href="#about">ჩვენ შესახებ</a>
+    <a href="#wines">ღვინოები</a>
+    <a href="#contact">კონტაქტი</a>
+</nav>
 
-  <div class="container">
-    <div class="booking-grid">
-      <div class="destination-details">
-        <h3>ტოკიოში მოგზაურობის დეტალები</h3>
-        <ul class="details-list">
-          <li>
-          გაფრენა:
-          თბილისიდან
-          </li>
-          <li>
-          დანიშნულება:
-          ტოკიო
-          </li>
-          <li>
-          ფრენის დრო:
-          11 საათი 30 წუთი
-          </li>
-          <li>
-          ფასი:
-          ₾ 1,200 დან
-          </li>
-        </ul>
-      </div>
+<div class="container">
 
-      <div class="booking-form" id="booking">
-        <h3>რეისის დაჯავშნა</h3>
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="full-name">სრული სახელი</label>
-            <input type="text" id="full-name" name="full-name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">ელ. ფოსტა</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="departure-date">გაფრენის თარიღი</label>
-            <input type="date" id="departure-date" name="departure-date" required>
-          </div>
-
-          <div class="form-group">
-            <label for="return-date">დაბრუნების თარიღი</label>
-            <input type="date" id="return-date" name="return-date" required>
-          </div>
-
-          <div class="form-group">
-            <label for="passengers">მგზავრთა რაოდენობა</label>
-            <select id="passengers" name="passengers" required>
-              <option value="1">1 მგზავრი</option>
-              <option value="2">2 მგზავრი</option>
-              <option value="3">3 მგზავრი</option>
-              <option value="4">4 მგზავრი</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn-submit">რეისის დაჯავშნა</button>
-        </form>
-      </div>
+    <div class="section" id="about">
+        <h2>ჩვენ შესახებ</h2>
+        <div class="about">
+            <img src="Blog-10-Facts.jpg">
+            <p>
+                ჩვენი მეღვინეობა ეფუძნება 8000-წლიან ქართულ ღვინის კულტურას.
+                ვქმნით ბიოლოგიურად სუფთა ღვინოებს, ქვევრისა და თანამედროვე ტექნოლოგიების შერწყმით.
+            </p>
+        </div>
     </div>
 
-    <section class="video-section">
-      <div class="video-container">
-        <div class="video-wrapper">
-          <video controls>
-            <source src="tokyo.mp4" type="video/mp4">
-            ტოკიოს ვიდეო.
-          </video>
-          <div class="video-caption">ტოკიოს ჩვეულებრივი დღე</div>
-        </div>
-      </div>
-    </section>
-  </div>
+    <div class="section" id="wines">
+        <h2>ჩვენი ღვინოები</h2>
+        <div class="wines">
 
-  <footer id="contact">
-    <p>© 2025 GOA Airlines.</p>
-  </footer>
+            <div class="wine-card">
+                <img src="red-wine-blends-FT-MAG1116-2000-4f3c3e91bcd646ea8a21f2152746ef53_6478afc8d0383.jpg">
+                <div>
+                    <h3>საფერავი</h3>
+                    <p>ღრმა, ძლიერი წითელი ღვინო მდიდარი არომატით.</p>
+                    <button onclick="buyWine('საფერავი')">შეძენა</button>
+                </div>
+            </div>
+
+            <div class="wine-card">
+                <img src="chamosaxmeli_tetri.jpg">
+                <div>
+                    <h3>რქაწითელი</h3>
+                    <p>მსუბუქი და არომატული თეთრი ღვინო.</p>
+                    <button onclick="buyWine('რქაწითელი')">შეძენა</button>
+                </div>
+            </div>
+
+            <div class="wine-card">
+                <img src="georgia-wine-qartuli-ghvino.webp">
+                <div>
+                    <h3>ქინძმარაული</h3>
+                    <p>ნახევრად ტკბილი ღვინო ხილის ტონებით.</p>
+                    <button onclick="buyWine('ქინძმარაული')">შეძენა</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>კონტაქტი</h2>
+        <div class="contact-box">
+            <p>Email: info@wine.ge</p>
+            <p>ტელ: +995 599 12 34 56</p>
+            <p>მისამართი: კახეთი, საქართველო</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 ქართული მეღვინეობა</p>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
