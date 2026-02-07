@@ -14,9 +14,6 @@
 # print(second_biggest)
 
 
-# 2) მომხმარებელს შემოატანინეთ წინადადება და დაითვალეთ თუ ამ წინადადებაში რამდენი სიტყვის
-#სიგრძე არის 4-ზე მეტი, დაპრინტეთ ასეთი სიტყვების რაოდენობა, მაგალითად 4. გამოიყენეთ while ციკლი.
-
 
 # sentence = input("choose any sentece: ")
 
@@ -87,21 +84,21 @@
 # 6)  მომხმარებელს შემოატანინეთ წინადადება და დაპრინტეთ ამ წინადადებაში მყოფი 
 # ყველაზე გრძელი სიტყვა, გამოიყენეთ while ციკლი, არ გამოიყენოთ max() ფუნქცია.
 
-მომხამრებელი = input("type any letter:")
-word = ""
-word2 = ""
+# მომხამრებელი = input("type any letter:")
+# word = ""
+# word2 = ""
 
 
-i = 0
-while i < len(მომხამრებელი):
-    if მომხამრებელი[i] != " ":
-        word2 += მომხამრებელი[i]
-    else:
-        if len(word2) > len(word):
-            word = word2
-        word2 = " "
-    i += 1
-print("longest word is:" , word)
+# i = 0
+# while i < len(მომხამრებელი):
+#     if მომხამრებელი[i] != " ":
+#         word2 += მომხამრებელი[i]
+#     else:
+#         if len(word2) > len(word):
+#             word = word2
+#         word2 = " "
+#     i += 1
+# print("longest word is:" , word)
 
         
 
