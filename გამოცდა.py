@@ -326,3 +326,7 @@
 #     if len(my_list[i]) > len(longest):
 #         longest = my_list[i]
 # print("ყველაზე დიდი სტრინგია",longest)
+
+
+
+
