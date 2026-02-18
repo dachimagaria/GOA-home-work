@@ -12,7 +12,6 @@
 
 
 def say_my_name():
-
     print("my name is dachi")
 
 say_my_name()
