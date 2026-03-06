@@ -1,0 +1,29 @@
+#tesla {
+    font-weight: 700;
+    font-size: 22px;
+    color: crimson;
+}
+
+#bmw {
+    font-weight: 400;
+    font-size: 18px;
+    color: navy;
+}
+
+#audi {
+    font-weight: 500;
+    font-size: 20px;
+    color: darkgreen;
+}
+
+#mercedes {
+    font-weight: 600;
+    font-size: 21px;
+    color: purple;
+}
+
+#ferrari {
+    font-weight: 800;
+    font-size: 23px;
+    color: orange;
+}
