@@ -1,0 +1,14 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: 900;           
+    color: rgb(0, 128, 0);      
+    font-size: 24px;            
+}
+
+th, td {
+    border: 2px solid rgb(0, 128, 0); 
+    padding: 10px;
+    text-align: left;
+}

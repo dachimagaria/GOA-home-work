@@ -1,0 +1,17 @@
+
+
+.group-list {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+
+.group-list ol {
+  font-weight: 500;
+}
+
+
+.group-list ul {
+  font-weight: bold;
+}
