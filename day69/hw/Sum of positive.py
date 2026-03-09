@@ -1,3 +1,6 @@
+
+
+
 def positive_sum(arr):
     positive_nums = 0
     
