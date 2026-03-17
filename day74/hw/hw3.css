@@ -1,0 +1,30 @@
+/* 3) შექმენით ლინკი და გამოიყენეთ :visited ფსევდო-სელექტორი, 
+რომ ლინკზე გადასვლის შემდეგ ამ ლინკს ჰქონდეს იასამნისფერი ფერი და font-family: Arial. */
+
+
+
+
+
+
+.facebook:visited{
+color: black; 
+font-weight: bold;
+font-family: Arial;
+font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
