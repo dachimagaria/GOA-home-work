@@ -1,0 +1,11 @@
+.facebook {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.facebook:visited {
+    background-color: lightgray;
+    color: darkblue;
+    padding: 5px 10px;
+}

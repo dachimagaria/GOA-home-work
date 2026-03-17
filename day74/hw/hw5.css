@@ -1,0 +1,13 @@
+
+/* 5) შექმენით ლინკი, სადაც :hover-ზე ტექსტს დაეწერება ქედახაზი, ტექსტის ფერი გახდება მწვანე და ტექსტის ზომა 20px. */
+.facebook{
+text-decoration: none;
+}
+
+
+
+.facebook:hover {
+text-decoration: underline;
+color: green;
+font-size: 20px;
+}

@@ -1,0 +1,10 @@
+/* 4) შექმენით ლინკი და გამოიყენეთ :active ფსევდო-სელექტორი, 
+რომ დაჭერის დროს ლინკს დაემატოს უკანა ფონის ფერი ყვითელი და ზღვარი 2px solid შავი. */
+
+
+
+
+.facebook:active {
+background-color: yellow;
+border: 2px solid black;
+}
