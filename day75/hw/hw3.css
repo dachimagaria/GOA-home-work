@@ -1,0 +1,14 @@
+.categories {
+    list-style-type: disc;
+    color: white;
+    background-color: #6c5ce7;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.categories ol {
+    list-style-type: lower-alpha;
+    color: #ffeaa7;
+    font-size: 14px;
+}
