@@ -1,0 +1,33 @@
+/* 1)შექმენი სარეგისტრაციო ფორმა-->
+
+სადაც მომ ხმარებელი შეიუვანს სახელს ემაილს და მის პაროლს
+
+გამოიყენეთ placeholder ,label არ არის საჭირო
+
+თითიეული input ის სტილები --> მოაშორეთ outline , უკანა ფონის ფერი იყოს მწვანე , border ქონდეს წითელი , ტექსტის ფერი ქონდეს ლურჯი , მოუმრგვალეთ კუთხეები 10px ით, შეუცვალეთ კალიგრაფია, გახადეთ მუქი 
+
+input თეგებს რომ დააკლიკბთ მიიღონ მათ შემდეგი სტილები --> ფონის ფერი გახდეს შავიო , ტექსტის ფერი თეთრი , ბორდერი საერთოდ მოშორდეს , მოუმსრგვალდეს კუთხეები 10 px ით ,და გახდეს მუქის ნაცვლად თხელი ტექსტი */
+
+body{
+    background-color: #111;
+}
+
+input{
+    width: 280px;
+    outline: none;
+    background-color: black;
+    border: 2px solid white;
+    color: blue;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+input:focus{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+}
