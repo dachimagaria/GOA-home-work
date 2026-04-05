@@ -1,0 +1,26 @@
+/* 4) შექმენით დაულაგებელი სია, სადაც ერთ ხაზში გამოიყენებთ შემოკლებულ shorthand კუთვნილებას და ერთდროულად მიუთითებთ ნიშნულის ტიპს, 
+მდებარეობას და  სურათსაც, შემდეგ კი სიას და თითოეულ li ელემენტს გაუწერეთ საზღვარი, უკანა ფონის ფერი, font-family, და დაამატეთ hover ეფექტი, 
+რომ მაუსის გადატარებისას შეიცვალოს უკანა ფონის ფერი და ტექსტის ფერი. */
+
+
+ul {
+   
+    list-style: square inside url("css_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.png");
+    
+    padding: 0;
+    width: 300px;
+}
+
+li {
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+
+li:hover {
+    background-color: #333;
+    color: #fff;
+}

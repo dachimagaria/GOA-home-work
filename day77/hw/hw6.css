@@ -1,0 +1,36 @@
+
+
+
+.main-list {
+    list-style-type: upper-roman; 
+    width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 3px solid #333;
+    font-size: 18px;
+    color: #222;
+}
+
+
+.main-list  li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #999;
+    background-color: #f9f9f9;
+}
+
+
+.main-list ul {
+    list-style-type: square; 
+    margin-top: 10px;
+    padding-left: 20px;
+    background-color: #e6f0ff;
+    border: 2px dashed #4a90e2;
+}
+
+
+.main-list ul li {
+    margin: 5px 0;
+    padding: 5px;
+    color: #003366;
+}
