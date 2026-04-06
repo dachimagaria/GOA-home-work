@@ -1,0 +1,11 @@
+.GOA {
+  width: 150px;
+  height: 150px;
+  background-color: brown;
+  border: 6px solid yellow;
+  padding: 900px;
+}
+
+.CLICK {
+  padding-top: 50px;
+}

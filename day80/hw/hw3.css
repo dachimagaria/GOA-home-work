@@ -1,0 +1,12 @@
+.CLICKME {
+  width: 250px;
+  height: 250px;
+  background-color: pink;
+  border: 2px solid black;
+  color: green;
+  padding: 200px 150px;
+}
+
+.MONKEY {
+  padding: 20px;
+}
