@@ -3,9 +3,9 @@
   height: 150px;
   background-color: brown;
   border: 6px solid yellow;
-  padding: 900px;
+  padding-top: 900px;
 }
 
 .CLICK {
-  padding-top: 50px;
+  padding-bottom: 50px;
 }
