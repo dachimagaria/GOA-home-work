@@ -1,0 +1,23 @@
+.parent{
+    display: flex;
+    width: 600px;
+    border: 2px solid red;
+}
+
+
+.kid{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border: 1px solid red;
+}
+
+
+.kid:hover{
+    background-color: tomato;
+}
+
+
+.adopted_kid:hover{
+    flex-grow: 3;
+}

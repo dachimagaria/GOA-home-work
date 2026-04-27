@@ -1,0 +1,55 @@
+
+
+
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+
+
+.greate_home img {
+    width: 50px;
+    color: black;
+}
+
+.navigation_menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.Click button{
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
