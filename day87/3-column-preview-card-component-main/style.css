@@ -20,12 +20,13 @@ body{
 
 .parent{
     width:930px;
-    height:490px;
+    height:520px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     border-radius: 7px;
+   
 }
 
 #Sedans{
@@ -37,6 +38,7 @@ body{
 
 #SUVs{
     background-color: rgb(11, 125, 123);
+    
 }
 
 #Luxury{
@@ -51,20 +53,54 @@ body{
     justify-content: start;
     align-items: start;
     padding: 40px;
+    gap: 50px;
 }
 
 
 h1{
     font-family: "Big Shoulders", sans-serif;
     color: white;
+    font-size: 40px;
+    font-weight: 500;
 }
 
 p , button{
     font-family: "Lexend Deca", sans-serif;
+    
 }
 
 p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+
+    
     
 }
+
+button {
+    background-color: #ffffff; 
+    border: none;
+    border-radius: 30px; 
+    font-size: 16px;
+    padding: 12px 28px; 
+    cursor: pointer;
+    display: flex;
+    margin-top: 45px;
+    
+}
+  
+.button1{
+    color: orange;
+}
+
+.button2{
+    color: rgb(7, 153, 153);
+}
+.button3{
+    color: rgb(9, 97, 97);
+}
+
+
+
 
 
