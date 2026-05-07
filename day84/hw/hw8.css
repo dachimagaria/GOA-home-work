@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  width: 400px;
+}
+
+.item {
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+
+.item-no-shrink {
+  flex-shrink: 0;
+}
