@@ -336,11 +336,6 @@
 
 
 
-alphabet = ["დაჩი" , "ქალაქი" , "გიორგი" , "მარსი"]
-
-
-print(sorted(alphabet))
-
 
 
 
