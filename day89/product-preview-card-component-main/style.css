@@ -8,13 +8,12 @@
 }
 
 body{
-    margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: hsl(30, 38%, 92%);
-     font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -74,7 +73,6 @@ h3{
 .h1_2{
     color: hsl(158, 36%, 37%);
     font-size: 33px;
-    margin: 0;
     font-family: "Fraunces", serif;
 }
 

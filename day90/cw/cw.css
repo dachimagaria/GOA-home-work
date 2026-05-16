@@ -1,0 +1,30 @@
+
+
+div{
+    height: 200px;
+    width: 200px;
+}
+
+.dachi{
+    background-color: red;
+
+    position: relative;
+    left: 105px;
+    top: 65px;
+}
+
+.saba{
+    background-color: blue;
+}
+
+.gega{
+    background-color: black;
+}
+
+.rezi{
+    background-color: aqua;
+}
+
+.joseph_joestar{
+    background-color: indigo;
+}
